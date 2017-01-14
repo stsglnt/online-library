@@ -1,0 +1,55 @@
+
+   <div class="container">
+        <div class="col-lg-8">
+          <div class="well">
+               <h3>Дані про автора</h3>
+            <form novalidate name="authorForm">
+                    <div class="form-group">
+                       <label for="">Прізвище:</label>
+                       <input type="text" class="form-control" ng-model="newAuthor.sname" required>
+                    </div>   
+                     
+                    <div class="form-group">
+                        <label for="">Ім'я:</label>
+                        <input type="text" class="form-control" ng-model="newAuthor.name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="">По батькові:</label>
+                        <input type="text" class="form-control" ng-model="newAuthor.patronim" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="">Дата народження:</label>
+                        <input id="birthDate" type="text" class="form-control" ng-model="newAuthor.birthday">
+                    </div>
+                    <div class="form-group">
+                        <label for="">книга:</label>
+                        <input id="birthDate" type="text" class="form-control" ng-model="newAuthor.books.somebook.bookName">
+                    </div>  
+                    <div class="form-group">
+                        <label for="">жанр:</label>
+                        <input id="birthDate" type="text" class="form-control" ng-model="newAuthor.books.somebook.ganr">
+                    </div>  
+                       <div class="form-group">
+                        <label for="">сторінки:</label>
+                        <input id="birthDate" type="number" class="form-control" ng-model="newAuthor.books.somebook.pages">
+                    </div>
+            
+                <button class="btn btn-default" ng-click="saveEdit(newAuthor)" ng-disabled="authorForm.$invalid">Зберегти</button>
+                <button class="btn btn-default" ng-click="cancelEdit()">Скасувати</button>
+               
+
+             </form>   
+           </div>
+       </div>
+    </div>
+       
+<script>
+        $(function(){
+            $("#birthDate").datepicker();
+        })
+    
+</script>
+
+   

@@ -1,0 +1,34 @@
+
+body {
+    padding-top: 30px;
+    background-image: url(../imgs/bgbook.jpg);
+  }
+@media (max-width: 980px) {
+    body {
+      padding-top: 0;
+    }
+  }
+.searchbox {
+    padding: 5px;
+}
+#checkboxMore{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#bottomBtn{
+    margin-bottom: 10px;
+}
+
+
+form .ng-invalid.ng-dirty {
+    background-color: lightpink;
+}
+
+
+form .ng-valid.ng-dirty {
+    background-color: lightgreen;
+}
+
+h3{
+    line-height: 90%;
+}

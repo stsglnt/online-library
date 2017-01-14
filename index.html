@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="libraryApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Libraries</title>
+    
+    
+    <!--scripts-->
+    
+    <script src="libraries/jquery-3.1.1.min.js"></script>
+    <script src="libraries/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="libraries/angular.min.js"></script>
+    <script src="libraries/angular-resource.min.js"></script>
+    <script src="libraries/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/forstyle.js"></script>
+    <!--style-->
+    <link rel="stylesheet" href="libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="libraries/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    
+    
+    
+
+    
+    
+    
+    
+    
+</head>
+<body ng-controller="libraryCtrl">
+
+      
+        <ng-include src="'views/editAuthor.html'" ng-show="currentView == 'editAuthor'"></ng-include>
+        <ng-include src="'views/editBook.html'" ng-show="currentView == 'editBook'"></ng-include>
+        <ng-include src="'views/main.html'" ng-show="currentView == 'main'"></ng-include>
+    
+    
+</body>
+</html>

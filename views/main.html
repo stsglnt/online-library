@@ -1,0 +1,64 @@
+<script>
+    $(function(){
+         $( "input[type='checkbox']" ).checkboxradio({
+             icon: false
+         });
+    })
+
+</script>
+<div class="container">
+
+
+   <div class="col-lg-12 searchbox">
+    <div class="input-group">
+     
+      <input type="text" class="form-control" placeholder="Search for..." ng-model="bookSearch.$">
+    </div>
+  </div>
+
+   
+   
+    <div  ng-repeat="author in library | filter : bookSearch" >
+        <div class="well col-lg-8">
+        
+        <div>
+            <h3>Прізвище: <i>{{author.sname}}</i></h3>
+            <h3> Ім'я: <i>{{author.name}}</i></h3>
+            <h3> По батькові: <i>{{author.patronim}}</i></h3>
+            <p>Born: {{author.birthday}}</p>
+        </div>
+        
+        <div class="col-lg-offset-8 col-lg-4">
+                <button ng-click="delete(author)" class="btn btn-danger">Delete</button>
+                <button ng-click="editOrCreate(author)" class="btn btn-info">Edit</button>  
+        </div>                                      
+                                     
+                                    
+             <label id="checkboxMore">More                       
+                <input  type="checkbox" ng-model="more">
+           </label>  
+           
+           
+            <div ng-repeat="item in author.books" ng-hide="!more">
+             <div id="dropBook">
+                   <hr>
+                       <h3>Список книг: </h3>
+                       <ol><li>{{item.bookName}}</li></ol>
+                       <ul>
+                       <li>Жанр: <i>{{item.ganr}}</i></li>
+                       <li>Кількість сторінок: {{item.pages}}</li>
+                  </ul>
+              </div> 
+            </div>
+                     
+                                   
+
+        </div> 
+    </div>
+</div>
+              
+     <div class="container">
+        <button ng-click="editOrCreate()" class="btn btn-primary" id="bottomBtn">Add New Author</button>
+     </div>
+
+
